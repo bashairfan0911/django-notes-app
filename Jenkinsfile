@@ -39,6 +39,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
+                    echo "done dosto"
                     sh "docker compose down || true"
                     sh "docker compose up -d"
                 }
